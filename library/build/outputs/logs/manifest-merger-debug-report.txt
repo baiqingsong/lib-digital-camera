@@ -1,0 +1,43 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:2:1-12:12
+INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:2:1-12:12
+INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:2:1-12:12
+	package
+		INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+		ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:2:1-12:12
+		INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.usb.host
+ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:3:5-62
+	android:name
+		ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:3:19-59
+application
+ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:4:5-11:19
+activity#org.acra.CrashReportDialog
+ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:5:9-10:59
+	android:excludeFromRecents
+		ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:7:13-46
+	android:launchMode
+		ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:9:13-48
+	android:theme
+		ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:10:13-56
+	android:finishOnTaskLaunch
+		ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:8:13-46
+	android:name
+		ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml:6:13-54
+uses-sdk
+INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+		ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+		INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+		ADDED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml
+		INJECTED from D:\lib\lib-digital-camera\library\src\main\AndroidManifest.xml

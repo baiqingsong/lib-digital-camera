@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="match_parent"
+  android:background="@color/dc_propertyListBackground"
+  android:orientation="vertical">
+
+  <ImageButton
+    android:id="@+id/driveFocusFar3"
+    style="@style/dc_DriveLensItem"
+    android:src="@drawable/arrow3"/>
+
+  <ImageButton
+    android:id="@+id/driveFocusFar2"
+    style="@style/dc_DriveLensItem"
+    android:src="@drawable/arrow2"/>
+
+  <ImageButton
+    android:id="@+id/driveFocusFar1"
+    style="@style/dc_DriveLensItem"
+    android:src="@drawable/arrow1"/>
+
+  <ImageButton
+    android:id="@+id/driveFocusNear1"
+    style="@style/dc_DriveLensItem"
+    android:rotation="180"
+    android:src="@drawable/arrow1"/>
+
+  <ImageButton
+    android:id="@+id/driveFocusNear2"
+    style="@style/dc_DriveLensItem"
+    android:rotation="180"
+    android:src="@drawable/arrow2"/>
+
+  <ImageButton
+    android:id="@+id/driveFocusNear3"
+    style="@style/dc_DriveLensItem"
+    android:rotation="180"
+    android:src="@drawable/arrow3"/>
+
+</LinearLayout>

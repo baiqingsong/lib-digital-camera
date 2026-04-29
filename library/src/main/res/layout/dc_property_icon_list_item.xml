@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- If this is changed the measurement in PropertyDisplayer for the listview width has to be adapted too -->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@android:id/icon"
+  style="@style/dc_PropertyListItem"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingRight="6dip"/>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="dc_windowBackground">#ffdddddd</color>
+  <color name="dc_propertyListBackground">#aadddddd</color>
+  <color name="dc_actionBarBackground">#ffbbbbbb</color>
+  <color name="dc_selectedValueBackground">#ffffffff</color>
+</resources>

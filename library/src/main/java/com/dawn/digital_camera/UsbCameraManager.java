@@ -69,6 +69,9 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
     private int reconnectAttempts;
     private boolean reconnectLoopRunning;
 
+    /**
+     * Create with explicit live view (simple use-case).
+     */
     public UsbCameraManager(Activity activity, PictureView pictureView, IUsbCameraTakePicListener mUsbCameraTakePicListener) {
         this.activity = activity;
         this.liveView = pictureView;
@@ -80,12 +83,44 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
         this.presenceMonitor = UsbCameraPresenceMonitor.getInstance(activity);
 
         gestureDetector = new GestureDetector(activity, this);
-        pictureView.setOnTouchListener((v, event) -> {
-            if (camera != null) {
-                gestureDetector.onTouch(event);
-            }
-            return true;
-        });
+        if (pictureView != null) {
+            pictureView.setOnTouchListener((v, event) -> {
+                if (camera != null) {
+                    gestureDetector.onTouch(event);
+                }
+                return true;
+            });
+        }
+    }
+
+    /**
+     * Update the live-view surface. Call before onStart() when using SessionActivity.
+     */
+    public void setLiveView(PictureView view) {
+        this.liveView = view;
+        if (view != null) {
+            view.setOnTouchListener((v, event) -> {
+                if (camera != null) {
+                    gestureDetector.onTouch(event);
+                }
+                return true;
+            });
+        }
+    }
+
+    /**
+     * Redirect camera lifecycle callbacks to a different SessionView (e.g. a Fragment).
+     * Pass null to restore self-dispatch.
+     */
+    public void setSessionView(SessionView view) {
+        this.sessionFrag = (view != null) ? view : this;
+    }
+
+    /**
+     * Returns the current connected camera, or null if disconnected.
+     */
+    public Camera getCamera() {
+        return camera;
     }
 
     /**
@@ -179,18 +214,18 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
 
         showCapturedPictureNever = false;
         showCapturedPictureDuration = 1000;
-        liveView.setLiveViewData(null);
+        if (liveView != null) liveView.setLiveViewData(null);
     }
 
     private void startLiveViewAgain() {
         showsCapturedPicture = false;
         // Avoid recycling bitmaps here: PictureView might still draw it.
         if (currentCapturedBitmap != null) {
-            liveView.setPicture(null);
+            if (liveView != null) liveView.setPicture(null);
             currentCapturedBitmap = null;
         }
         if (camera != null && camera.isLiveViewOpen()) {
-            liveView.setLiveViewData(null);
+            if (liveView != null) liveView.setLiveViewData(null);
             currentLiveViewData = null;
             currentLiveViewData2 = null;
             camera.getLiveViewPicture(null);
@@ -255,8 +290,8 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
         currentLiveViewData = null;
         currentLiveViewData2 = null;
         currentCapturedBitmap = null;
-        liveView.setLiveViewData(null);
-        liveView.setPicture(null);
+        if (liveView != null) liveView.setLiveViewData(null);
+        if (liveView != null) liveView.setPicture(null);
     }
 
     private void handleUsbDetached() {
@@ -275,8 +310,8 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
         currentLiveViewData = null;
         currentLiveViewData2 = null;
         currentCapturedBitmap = null;
-        liveView.setLiveViewData(null);
-        liveView.setPicture(null);
+        if (liveView != null) liveView.setLiveViewData(null);
+        if (liveView != null) liveView.setPicture(null);
 
         // Make sure future attach triggers a fresh init.
         ptp.setCameraListener(this);
@@ -361,10 +396,11 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
             return;
         }
         if (camera.isLiveViewOpen()) {
-            if (camera.isLiveViewAfAreaSupported()) {
+            if (camera.isLiveViewAfAreaSupported() && liveView != null) {
                 camera.setLiveViewAfArea(liveView.calculatePictureX(posx), liveView.calculatePictureY(posy));
             }
         } else if (false) {
+            if (liveView == null) return;
             float x = liveView.calculatePictureX(posx);
             float y = liveView.calculatePictureY(posy);
             for (FocusPoint fp : camera.getFocusPoints()) {
@@ -378,22 +414,22 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
 
     @Override
     public void onPinchZoom(float pX, float pY, float distInPixel) {
-        liveView.zoomAt(pX, pY, distInPixel);
+        if (liveView != null) liveView.zoomAt(pX, pY, distInPixel);
     }
 
     @Override
     public void onTouchMove(float dx, float dy) {
-        liveView.pan(dx, dy);
+        if (liveView != null) liveView.pan(dx, dy);
     }
 
     @Override
     public void onFling(float velx, float vely) {
-        liveView.fling(velx, vely);
+        if (liveView != null) liveView.fling(velx, vely);
     }
 
     @Override
     public void onStopFling() {
-        liveView.stopFling();
+        if (liveView != null) liveView.stopFling();
     }
 
     @Override
@@ -438,7 +474,7 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
                 camera.isSettingPropertyPossible(Camera.Property.FocusPoints);
             }
         } else if (isPro) {
-            if (property == Camera.Property.CurrentFocusPoint) {
+            if (property == Camera.Property.CurrentFocusPoint && liveView != null) {
                 liveView.setCurrentFocusPoint(value);
             }
         }
@@ -492,7 +528,7 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
         if (camera.isHistogramSupported()) {
         }
 
-        liveView.setLiveViewData(null);
+        if (liveView != null) liveView.setLiveViewData(null);
         showsCapturedPicture = false;
         currentLiveViewData = null;
         currentLiveViewData2 = null;
@@ -528,7 +564,7 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
 
         data.hasHistogram &= false;
 
-        liveView.setLiveViewData(data);
+        if (liveView != null) liveView.setLiveViewData(data);
         currentLiveViewData2 = currentLiveViewData;
         this.currentLiveViewData = data;
         camera.getLiveViewPicture(currentLiveViewData2);
@@ -558,7 +594,7 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
         message.what = LIVEVIEWRESTARTERRUNNER;
         handler.sendMessageDelayed(message, showCapturedPictureDuration);
 
-        liveView.setPicture(bitmap);
+        if (liveView != null) liveView.setPicture(bitmap);
         Log.e("UsbCameraManager", "UsbCameraManager>>capturedPictureReceived:" + filename);
 
         if (mUsbCameraTakePicListener != null) {

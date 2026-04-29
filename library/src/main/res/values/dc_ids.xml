@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ID for the fragment container in the host app's layout.
+         The host activity must provide a FrameLayout (or similar) with this id. -->
+    <item name="fragment_container" type="id"/>
+</resources>

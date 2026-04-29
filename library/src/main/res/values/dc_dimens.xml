@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="dc_gridPropertyWidth">60dp</dimen>
+  <dimen name="dc_gridPropertyHeight">48dp</dimen>
+  <dimen name="dc_pictureStreamWidth">120dp</dimen>
+  <dimen name="dc_gallery_column_width">120dp</dimen>
+  <dimen name="dc_gallery_spacing">3dp</dimen>
+</resources>

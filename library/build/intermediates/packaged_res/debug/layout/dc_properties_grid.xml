@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+
+  <TableRow>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/liveViewToggle"
+      style="@style/dc_GridPropertyToggle"
+      android:textOff="Live"
+      android:textOn="Live"/>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/histogramToggle"
+      style="@style/dc_GridPropertyToggle"
+      android:textOff="Hist"
+      android:textOn="Hist"/>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/driveLensToggle"
+      style="@style/dc_GridPropertyToggle"
+      android:textOff="Lens"
+      android:textOn="Lens"/>
+  </TableRow>
+
+  <TableRow>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/shutterSpeedToggle"
+      style="@style/dc_GridPropertyToggle"/>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/apertureValueToggle"
+      style="@style/dc_GridPropertyToggle"/>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/isoSpeedToggle"
+      style="@style/dc_GridPropertyToggle"/>
+  </TableRow>
+
+  <TableRow>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/whitebalanceToggle"
+      style="@style/dc_GridPropertyToggle"/>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/colorTemperatureToggle"
+      style="@style/dc_GridPropertyToggle"/>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/pictureStyleToggle"
+      style="@style/dc_GridPropertyToggle"/>
+  </TableRow>
+
+  <TableRow>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/meteringModeToggle"
+      style="@style/dc_GridPropertyToggle"/>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/focusMeteringModeToggle"
+      style="@style/dc_GridPropertyToggle"/>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/focusPointsToggle"
+      style="@style/dc_GridPropertyToggle"
+      android:text="@string/af_label"
+      android:textOff="@string/af_label"
+      android:textOn="@string/af_label"/>
+  </TableRow>
+
+  <TableRow>
+
+    <com.dawn.digital_camera.PropertyToggle
+      android:id="@+id/exposureCompensationToggle"
+      style="@style/dc_GridPropertyToggle"/>
+
+    <View
+      android:layout_width="@dimen/dc_gridPropertyWidth"
+      android:layout_height="@dimen/dc_gridPropertyHeight"/>
+
+    <ImageView
+      android:id="@+id/shootingModeView"
+      android:layout_width="@dimen/dc_gridPropertyWidth"
+      android:layout_height="@dimen/dc_gridPropertyHeight"
+      android:background="#FF00FF"
+      android:gravity="center"/>
+  </TableRow>
+
+</TableLayout>

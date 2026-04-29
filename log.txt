@@ -1,0 +1,138 @@
+> Task :library:compileDebugJavaWithJavac
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\SessionFragment.java:6: 错误: 找不到符号
+public abstract class SessionFragment extends BaseFragment implements SessionView {
+                                                                      ^
+  符号: 类 SessionView
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\SessionActivity.java:54: 错误: 找不到符号
+    public void setSessionView(SessionView view) {
+                               ^
+  符号:   类 SessionView
+  位置: 类 SessionActivity
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:108: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:118: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:125: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:131: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:135: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:139: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:143: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:147: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:151: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:155: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:159: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:163: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\GalleryFragment.java:167: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:84: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:88: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:92: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:96: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:100: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:104: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:108: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:112: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:116: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:120: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:124: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:128: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\PictureFragment.java:132: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:110: 错误: 找不到符号
+        availableShotsText = (TextView) view.findViewById(R.id.availableShotsText);
+                                                              ^
+  符号:   变量 availableShotsText
+  位置: 类 id
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:358: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:382: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:413: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:423: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:470: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:492: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:497: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:504: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:513: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:536: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:550: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:589: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+D:\lib\lib-digital-camera\library\src\main\java\com\dawn\digital_camera\view\TabletSessionFragment.java:614: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+42 个错误
+
+> Task :library:compileDebugJavaWithJavac FAILED
+

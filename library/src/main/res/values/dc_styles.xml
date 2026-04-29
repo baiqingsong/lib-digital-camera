@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="dc_DriveLensItem">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:padding">15dp</item>
+  </style>
+
+  <style name="dc_RoProperty">
+    <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+  </style>
+
+  <style name="dc_PropertyListTitle">
+    <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+  </style>
+
+  <style name="dc_PropertyListItem">
+    <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    <item name="android:minHeight">32dp</item>
+  </style>
+
+  <style name="dc_PropertyToggle">
+    <item name="android:textOn"></item>
+    <item name="android:textOff"></item>
+    <item name="android:layout_width">@dimen/dc_gridPropertyWidth</item>
+    <item name="android:layout_height">@dimen/dc_gridPropertyHeight</item>
+    <item name="android:gravity">center</item>
+    <item name="android:text">" "</item>
+  </style>
+
+  <style name="dc_PropertyToggle.Large">
+    <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+  </style>
+
+  <style name="dc_PropertyToggle.Medium">
+    <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+  </style>
+
+  <style name="dc_GridPropertyToggle" parent="@style/dc_PropertyToggle.Medium"/>
+
+  <style name="dc_StreamItemLabel">
+    <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+  </style>
+
+  <style name="dc_LiveViewContinueButton">
+    <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+  </style>
+
+</resources>

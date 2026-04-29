@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content">
+
+  <com.dawn.digital_camera.view.AspectRatioImageView
+    android:id="@+id/image1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:gravity="fill_horizontal"/>
+
+  <TextView
+    android:id="@android:id/text1"
+    style="@style/dc_StreamItemLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|right"
+    android:background="?android:attr/colorForegroundInverse"
+    android:textColor="?android:attr/colorForeground"/>
+
+</FrameLayout>
