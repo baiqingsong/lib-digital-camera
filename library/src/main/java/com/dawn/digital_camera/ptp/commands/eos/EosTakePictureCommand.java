@@ -27,7 +27,8 @@ public class EosTakePictureCommand extends EosCommand {
 
     private static final String TAG = "EosTakePictureCommand";
     private int retryCount = 0;
-    private static final int MAX_RETRIES = 10;
+    // 减少重试次数：减少DeviceBusy期间对相机的冲击，给EosEventCheck更多时间获取ObjectAdded事件
+    private static final int MAX_RETRIES = 3;
 
     public EosTakePictureCommand(EosCamera camera) {
         super(camera);

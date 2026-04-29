@@ -68,6 +68,8 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
 
     private int reconnectAttempts;
     private boolean reconnectLoopRunning;
+    // 防止拍照指令重叠：上一张照片的ObjectAdded事件到达前，禁止再次下发拍照指令
+    private boolean awaitingObjectAdded = false;
 
     /**
      * Create with explicit live view (simple use-case).
@@ -237,6 +239,10 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
             Log.w(TAG, "takePicture ignored: camera is null");
             return;
         }
+        if (awaitingObjectAdded) {
+            Log.w(TAG, "takePicture ignored: waiting for previous capture ObjectAdded event");
+            return;
+        }
         Log.e("UsbCameraManager", "UsbCameraManager>>takePicture:" + camera.isAutoFocusSupported());
         camera.focus();
     }
@@ -287,6 +293,7 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
 
         showsCapturedPicture = false;
         justCaptured = false;
+        awaitingObjectAdded = false;
         currentLiveViewData = null;
         currentLiveViewData2 = null;
         currentCapturedBitmap = null;
@@ -501,6 +508,9 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
     public void focusEnded(boolean hasFocused) {
         if (hasFocused) {
             capture();
+        } else {
+            // 拍照失败（DeviceBusy重试耗尽等）：重置标志位，允许用户重新尝试
+            awaitingObjectAdded = false;
         }
     }
 
@@ -508,6 +518,7 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
         if (camera == null) {
             return;
         }
+        awaitingObjectAdded = true;
         camera.capture();
         justCaptured = true;
         Message message = new Message();
@@ -776,7 +787,8 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
 
     @Override
     public void onObjectAdded(int handle, int format) {
-        //收到拍摄照片通知
+        //收到拍摄照片通知，清除等待标志
+        awaitingObjectAdded = false;
         sessionFrag.objectAdded(handle, format);
         Log.e("UsbCameraManager", "UsbCameraManager>>onObjectAdded--------handle:"+handle + ",format:" +format );
     }
