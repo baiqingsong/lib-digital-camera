@@ -76,6 +76,7 @@ drawable whitebalance_tungsten
 drawable whitebalance_unknown
 id apertureValueToggle
 id autoHideCB
+id availableShotsText
 id batteryLevelIcon
 id btn_liveview
 id colorTemperatureToggle

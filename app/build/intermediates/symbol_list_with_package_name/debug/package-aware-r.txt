@@ -3170,6 +3170,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id autoHideCB
+id availableShotsText
 id barrier
 id baseline
 id batteryLevelIcon
@@ -3178,13 +3179,11 @@ id beginning
 id bestChoice
 id blocking
 id bottom
-id bottom_bar
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
 id btn_liveview
-id btn_take_picture
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3450,7 +3449,6 @@ id pictureStyleToggle
 id picture_stream
 id picture_stream_container
 id picture_stream_toggle
-id picture_view
 id pin
 id position
 id postLayout
@@ -3548,6 +3546,7 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id tabMode
+id tab_layout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3594,7 +3593,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tv_status
 id unchecked
 id uniform
 id unlabeled

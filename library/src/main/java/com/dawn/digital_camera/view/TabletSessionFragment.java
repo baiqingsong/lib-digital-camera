@@ -107,7 +107,7 @@ public class TabletSessionFragment extends SessionFragment implements GestureDet
         focusBtn = (Button) view.findViewById(R.id.focusBtn);
         takePictureBtn = (Button) view.findViewById(R.id.takePictureBtn);
         liveView = (PictureView) view.findViewById(R.id.liveView);
-        availableShotsText = null; // not in dc_session_frag layout
+        availableShotsText = (TextView) view.findViewById(R.id.availableShotsText);
         batteryLevelView = (ImageView) view.findViewById(R.id.batteryLevelIcon);
         focusModeText = (TextView) view.findViewById(R.id.focusModeText);
         exposureIndicatorText = (TextView) view.findViewById(R.id.exposureIndicatorText);
@@ -115,7 +115,7 @@ public class TabletSessionFragment extends SessionFragment implements GestureDet
         driveLensToggle = (ToggleButton) view.findViewById(R.id.driveLensToggle);
         liveViewToggle = (ToggleButton) view.findViewById(R.id.liveViewToggle);
         histogramToggle = (ToggleButton) view.findViewById(R.id.histogramToggle);
-        shootingModeView = null; // not in dc_session_frag layout
+        shootingModeView = (ImageView) view.findViewById(R.id.shootingModeView);
         btnLiveview = (Button) view.findViewById(R.id.btn_liveview);
 
         btnLiveview.setOnClickListener(new OnClickListener() {

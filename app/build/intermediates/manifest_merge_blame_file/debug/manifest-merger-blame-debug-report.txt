@@ -15,22 +15,22 @@
 11-->D:\lib\lib-digital-camera\app\src\main\AndroidManifest.xml:4:19-59
 12
 13    <permission
-13-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\31dd2fd25ee9a0eaa021c7cd8a443f22\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+13-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 14        android:name="com.dawn.libdigitalcamera.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\31dd2fd25ee9a0eaa021c7cd8a443f22\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+14-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\31dd2fd25ee9a0eaa021c7cd8a443f22\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+15-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 16
 17    <uses-permission android:name="com.dawn.libdigitalcamera.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\31dd2fd25ee9a0eaa021c7cd8a443f22\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\31dd2fd25ee9a0eaa021c7cd8a443f22\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+17-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 18
 19    <application
 19-->D:\lib\lib-digital-camera\app\src\main\AndroidManifest.xml:6:5-27:19
 20        android:allowBackup="true"
 20-->D:\lib\lib-digital-camera\app\src\main\AndroidManifest.xml:7:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\31dd2fd25ee9a0eaa021c7cd8a443f22\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+21-->[androidx.core:core:1.9.0] C:\Users\bqsbq\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 22        android:debuggable="true"
 23        android:icon="@mipmap/ic_launcher"
 23-->D:\lib\lib-digital-camera\app\src\main\AndroidManifest.xml:8:9-43
@@ -87,25 +87,25 @@
 50-->[:library] D:\lib\lib-digital-camera\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-56
 51
 52        <provider
-52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\e6cc2b2d8911a4684bdbf3fe7c74bb2d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 53            android:name="androidx.startup.InitializationProvider"
-53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\e6cc2b2d8911a4684bdbf3fe7c74bb2d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
 54            android:authorities="com.dawn.libdigitalcamera.androidx-startup"
-54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\e6cc2b2d8911a4684bdbf3fe7c74bb2d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
 55            android:exported="false" >
-55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\e6cc2b2d8911a4684bdbf3fe7c74bb2d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
 56            <meta-data
-56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\e6cc2b2d8911a4684bdbf3fe7c74bb2d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 57                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\e6cc2b2d8911a4684bdbf3fe7c74bb2d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
 58                android:value="androidx.startup" />
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\e6cc2b2d8911a4684bdbf3fe7c74bb2d\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\bqsbq\.gradle\caches\transforms-3\27ea2d1fe40306b6a6ebc7514e2ae640\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
 59            <meta-data
-59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\bqsbq\.gradle\caches\transforms-3\eaf38ecd125200be5cc6930a21dfb71f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+59-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\bqsbq\.gradle\caches\transforms-3\1d1173f99a1313055c26367e9296308a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 60                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\bqsbq\.gradle\caches\transforms-3\eaf38ecd125200be5cc6930a21dfb71f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+60-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\bqsbq\.gradle\caches\transforms-3\1d1173f99a1313055c26367e9296308a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 61                android:value="androidx.startup" />
-61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\bqsbq\.gradle\caches\transforms-3\eaf38ecd125200be5cc6930a21dfb71f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+61-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\bqsbq\.gradle\caches\transforms-3\1d1173f99a1313055c26367e9296308a\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 62        </provider>
 63    </application>
 64

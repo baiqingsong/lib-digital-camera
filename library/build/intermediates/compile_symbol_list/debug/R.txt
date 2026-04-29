@@ -3166,6 +3166,7 @@ int id autoComplete 0x0
 int id autoCompleteToEnd 0x0
 int id autoCompleteToStart 0x0
 int id autoHideCB 0x0
+int id availableShotsText 0x0
 int id barrier 0x0
 int id baseline 0x0
 int id batteryLevelIcon 0x0
