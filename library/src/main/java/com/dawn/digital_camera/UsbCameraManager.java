@@ -697,7 +697,7 @@ public class UsbCameraManager implements SessionView, GestureDetector.GestureHan
     @Override
     public void onPropertyDescChanged(int property, int[] values) {
         sessionFrag.propertyDescChanged(property, values);
-        Log.e("UsbCameraManager", "UsbCameraManager>>onLiveViewStarted:" + "");
+        Log.e("UsbCameraManager", "UsbCameraManager>>onPropertyDescChanged: property=" + property);
     }
 
     @Override

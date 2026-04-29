@@ -45,12 +45,14 @@ public class EosTakePictureCommand extends EosCommand {
                 Log.w(TAG, "拍照指令返回 " + com.dawn.digital_camera.ptp.PtpConstants.responseToString(responseCode) + ", 重试 " + retryCount);
                 camera.onDeviceBusy(this, true);
             } else {
-                Log.e(TAG, "拍照指令重试 " + retryCount + " 次后失败: " + com.dawn.digital_camera.ptp.PtpConstants.responseToString(responseCode));
-                camera.onPtpError("拍照失败: " + com.dawn.digital_camera.ptp.PtpConstants.responseToString(responseCode));
+                // 超过最大重试次数：通知失败但不销毁会话，允许用户重新拍照
+                Log.e(TAG, "拍照指令重试 " + retryCount + " 次后失败: " + com.dawn.digital_camera.ptp.PtpConstants.responseToString(responseCode) + "，通知失败但保持会话");
+                camera.onFocusEnded(false);
             }
         } else if (responseCode != Response.Ok) {
             Log.e(TAG, "拍照指令失败: " + com.dawn.digital_camera.ptp.PtpConstants.responseToString(responseCode));
-            camera.onPtpError("拍照失败: " + com.dawn.digital_camera.ptp.PtpConstants.responseToString(responseCode));
+            // 非预期错误也只通知失败，不销毁会话
+            camera.onFocusEnded(false);
         }
     }
 

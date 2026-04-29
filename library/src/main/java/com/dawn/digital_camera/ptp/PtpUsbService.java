@@ -62,6 +62,7 @@ public class PtpUsbService implements PtpService {
     private final UsbManager usbManager;
     private PtpCamera camera;
     private CameraListener listener;
+    private long cameraStartTime;
 
     Runnable shutdownRunnable = new Runnable() {
         @Override
@@ -94,6 +95,15 @@ public class PtpUsbService implements PtpService {
                     listener.onCameraStarted(camera);
                 }
                 return;
+            }
+            if (camera.getState() == State.Starting) {
+                long elapsed = System.currentTimeMillis() - cameraStartTime;
+                if (elapsed < 3000) {
+                    if (AppConfig.LOG) {
+                        Log.i(TAG, "initialize: camera still starting (" + elapsed + "ms), skipping to avoid race");
+                    }
+                    return;
+                }
             }
             if (AppConfig.LOG) {
                 Log.i(TAG, "initialize: camera not active, satet " + camera.getState());
@@ -205,10 +215,12 @@ public class PtpUsbService implements PtpService {
                 PtpUsbConnection connection = new PtpUsbConnection(usbManager.openDevice(device), in, out,
                         device.getVendorId(), device.getProductId());
                 camera = new EosCamera(connection, listener, new WorkerNotifier(context));
+                cameraStartTime = System.currentTimeMillis();
             } else if (device.getVendorId() == PtpConstants.NikonVendorId) {
                 PtpUsbConnection connection = new PtpUsbConnection(usbManager.openDevice(device), in, out,
                         device.getVendorId(), device.getProductId());
                 camera = new NikonCamera(connection, listener, new WorkerNotifier(context));
+                cameraStartTime = System.currentTimeMillis();
             }
             return true;
         }

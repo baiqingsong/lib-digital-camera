@@ -94,6 +94,10 @@ public class TabletSessionFragment extends SessionFragment implements GestureDet
         @Override
         public void run() {
             justCaptured = false;
+            // 若拍照结果还未到达（capturedPictureReceived 未触发），主动重启预览流防止卡死
+            if (!showsCapturedPicture && camera() != null && camera().isLiveViewOpen()) {
+                camera().getLiveViewPicture(null);
+            }
         }
     };
 
@@ -575,14 +579,14 @@ public class TabletSessionFragment extends SessionFragment implements GestureDet
         showsCapturedPicture = false;
         if (currentCapturedBitmap != null) {
             liveView.setPicture(null);
-            currentCapturedBitmap.recycle();
+            // 不在此处 recycle：PictureView 可能仍在绘制此 Bitmap
             currentCapturedBitmap = null;
         }
         if (camera() != null && camera().isLiveViewOpen()) {
             liveView.setLiveViewData(null);
             currentLiveViewData = null;
             currentLiveViewData2 = null;
-            camera().getLiveViewPicture(currentLiveViewData2);
+            camera().getLiveViewPicture(null);
         }
     }
 
@@ -605,9 +609,7 @@ public class TabletSessionFragment extends SessionFragment implements GestureDet
         }
         liveView.setPicture(bitmap);
         Toast.makeText(getActivity(), filename, Toast.LENGTH_SHORT).show();
-        if (currentCapturedBitmap != null) {
-            currentCapturedBitmap.recycle();
-        }
+        // 不在此处 recycle 旧 Bitmap：PictureView 可能仍在绘制
         currentCapturedBitmap = bitmap;
     }
 
