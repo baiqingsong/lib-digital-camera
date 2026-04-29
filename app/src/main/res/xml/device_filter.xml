@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    USB device filter - allows the app to automatically receive USB permission prompts
+    for PTP/MTP cameras (Canon, Nikon, etc.).
+    Class 6 = Still Image (PTP/MTP)
+-->
+<resources>
+    <!-- Generic PTP/MTP (Still Image class) -->
+    <usb-device class="6" subclass="1" protocol="1" />
+    <!-- Canon EOS cameras -->
+    <usb-device vendor-id="1193" />
+    <!-- Nikon cameras -->
+    <usb-device vendor-id="1200" />
+</resources>

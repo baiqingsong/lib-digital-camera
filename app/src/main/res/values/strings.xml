@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Digital Camera Demo</string>
+    <string name="btn_take_picture">拍照</string>
+    <string name="status_not_connected">未连接相机</string>
+    <string name="status_connecting">连接中...</string>
+    <string name="status_connected">相机已连接</string>
+    <string name="status_error">连接错误</string>
+</resources>
